@@ -13,6 +13,7 @@ f' [x]          = []
 f' [x, y]       = []
 f' (x:y:z:xyzs) = x + y + z : f' (y:z:xyzs)
 
+-- f'' xs = zipWith3 (\x y z -> x + y + z) xs (tail xs) (tail (tail xs))
 
 
 g :: (Num a1, Ord a2) => [a2] -> a1
